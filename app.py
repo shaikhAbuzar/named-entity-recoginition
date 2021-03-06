@@ -51,7 +51,7 @@ if topic != '':
 	if page.exists():
 		text = page.text
 		# print(text)
-		# Creating the nlp object
+		# Process the text using the nlp object
 		doc = nlp(text)
 		# generate all the sentences from the provided object
 		sentences = [sentence for sentence in doc.sents]
@@ -82,7 +82,7 @@ if topic != '':
 				st.markdown(
 					displacy.render(
 						nlp(str(
-								' '.join([str(stmt) for stmt in sentences[sentence_start: sentence_end + 1]])
+								' '.join([str(stmt) for stmt in sentences[sentence_start: sentence_end]])
 							)), style='ent'),
 					unsafe_allow_html=True
 				)
