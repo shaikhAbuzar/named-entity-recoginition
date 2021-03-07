@@ -23,6 +23,8 @@
 3. If the topic exists it will show you the graph, and a table with the count of each tag.
 4. Use the slider to selecter the index of the sentences
 5. The expander below shows the visual representation of the sentences with the tags in them.
+
+> ### Note: The app might be slow to load due to the free tier of the heroku services.
 ---
 
 ## The Flask API:
@@ -50,3 +52,18 @@ The approach for the api can be summarised as folows:
 5. Copy the value of the token, we will using it for authenticate in the next step. Now open a new tab for the request and in the url section add the following url [https://ner-flaskapi.herokuapp.com/perform-ner], the method for this type is also **POST**, now in the **Params** section in the key add the **token** and in the value section add the value of the token that we received. And then add a new key **topic** and the value for the corresponding as the topic for which you want to search wikipedia, click on *Send*.
 6. You will receive the output in the body section, among the bottom options click on the *Preview* button and then it will show you the visual format of the document.
 ### NOTE: If the steps are confusing to follow , feel free to watch the video file that is provided in the **Demo** folder.
+---
+> ### To run the application and/or API on your local system, do the following:
+1. Download or clone the repo.
+2. Create a virtual environment using the command `virtualenv venv`.
+3. Activate the environment.
+    1. For Windows: `venv\Scripts\activate`
+    2. For Linux/Mac: `source venv/bin/activate`
+4. Install all the requirements file using the *requirements.txt* provide with the repo, using the command `pip install -r requirements.txt`
+5. To run the streamlit app, type the following command `streamlit run app.py`. It will provide you the local ip and the remote ip you can use either of them to view the application. All you need to do is copy either one of them and paste them into the url section of your browser.
+6. To run the Flask API use the command `python flaskapp.py` to run the app, it will provide you the local ip of your machine, to test the API use the instructions same as above but replace the **https://ner-flaskapi.herokuapp.com** with **your-localhost-ip** wherever necessary.
+```bash
+Eg:
+    https://ner-flaskapi.herokuapp.com/login will be replaced to http://localhost:5000/login
+```
+### You are up and ready to go.
