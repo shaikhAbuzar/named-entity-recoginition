@@ -49,3 +49,4 @@ The approach for the api can be summarised as folows:
 ```
 5. Copy the value of the token, we will using it for authenticate in the next step. Now open a new tab for the request and in the url section add the following url [https://ner-flaskapi.herokuapp.com/perform-ner], the method for this type is also **POST**, now in the **Params** section in the key add the **token** and in the value section add the value of the token that we received. And then add a new key **topic** and the value for the corresponding as the topic for which you want to search wikipedia, click on *Send*.
 6. You will receive the output in the body section, among the bottom options click on the *Preview* button and then it will show you the visual format of the document.
+### NOTE: If the steps are confusing to follow , feel free to watch the video file that is provided in the **Demo** folder.
